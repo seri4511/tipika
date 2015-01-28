@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<button class="btn btn-default" data-target="#layerpop" data-toggle="modal">모달출력버튼</button><br/>
+<div class="modal fade" id="layerpop" >
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- header -->
+            <div class="modal-header">
+                <!-- 닫기(x) 버튼 -->
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <!-- header title -->
+                <h4 class="modal-title">신청확인</h4>
+            </div>
+            <!-- body -->
+            <div class="modal-body">
+                <p>
+                    __구역__번 자리를<br>
+                    __구역 __자리로 변경하시겠습니까?
+                </p>
+            </div>
+            <!-- Footer -->
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-default" data-dismiss="modal">변경</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

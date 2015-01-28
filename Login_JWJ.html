@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>This is my first html page.</title>
+    <link rel="stylesheet" type="text/css" href="login_css.css">
+
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <script language="javascript">
+        $(function() {
+            $('#submit_button').click(
+                    function () {
+                        var password = $("#password").val();
+                        var id = $("#ID").val();
+
+                        if (id != "teamlab"){
+                            $("password_waring_caption").html("Check Your ID");
+                            return false;
+                        }
+
+
+                        if (password != "1234"){
+                            $("#password_waring_caption").html("Check Your password");
+                        }else{
+                            $("#password_waring_caption").html("");
+                            document.forms["login_form"].submit();
+
+                        }
+                        return false;
+
+                    }
+            );
+        });
+
+
+    </script>
+
+
+</head>
+<body>
+
+<header id="header">
+    <dl class="tema_logo">
+        <dt>사물함신청</dt>
+    </dl>
+</header>
+
+
+<section id="main">
+    <div id="login_information_area">
+        <dl class="login_information">
+            <dt>로그인</dt>
+            <dt>아이디와 비밀번호를 입력하세요</dt>
+        </dl>
+
+        <form id="login_form" action="login_val.html" method="get" >
+            <table class="login_input_field">
+                <tr id="login_id">
+                    <td > ID:</td>
+                    <td> <input type="text" id="ID" name="ID"/> </td>
+                </tr>
+
+                <tr id="login_password">
+                    <td>Password: </td>
+                    <td><input type="password" name="password" id="password"/> </td>
+                </tr>
+                <tr>
+                    <td colspan="1">
+                        <a href="seulgi_1.html"> <button type="button" id="submit_button">로그인</button> </a>
+                    </td>
+                    <td colspan="1">
+                        <a href="findPassword.html"> <button type="button" id=""searching_button">비밀번호찾기</button> </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="password_waring_caption">
+
+                    </td>
+                </tr>
+            </table>
+
+        </FORM>
+        <dl class="important_information">
+            <dt>*공지사항*</dt>
+            <dt>-초기 아이디는 학번, 초기비밀번호는 주민번호앞자리입니다.</dt>
+            <dt>-학생회비를 내지 않은 사람은 신청이 불가능합니다.</dt>
+            <dt>-초기 로그인 이후 반드시 비밀번호를 변경하시기 바랍니다.</dt>
+            <dt>-초기 로그인 이후 이메일 주소를 반드시 등록하시기 바랍니다.(비밀번호 찾기시 필요)</dt>
+        </dl>
+
+
+    </div>
+
+</section>
+
+</body>
+</html>
